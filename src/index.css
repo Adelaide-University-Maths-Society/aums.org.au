@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer base {
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headings;
+    @apply font-bold;
+    @apply mt-8;
+    @apply mb-6;
+  }
+
+  h1 {
+    @apply text-5xl;
+    @apply text-center;
+  }
+
+  h2 {
+    @apply text-4xl;
+    @apply text-center;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply font-body;
+    @apply font-medium;
+    @apply text-left;
+    @apply w-full;
+  }
+
+  a {
+  }
+
+  .main {
+    --s: 50px;  /* size  */
+    --m: 3px;    /* margin */
+    --f: calc(1.732*var(--s)+4*var(--m)-1px);
+  }
+
+  .hexagon-grid {
+    font-size: 0; /*disable white space between inline block element */
+  }
+
+  .hexagon-grid .hexagon {
+    width: 50px;
+    margin: 3px;
+    height: 57.735px; 
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-bottom: -11.425px; 
+  }
+
+  .hexagon-grid::before {
+    content: "";
+    width: 28px;
+    float: left;
+    height: 120%;
+    shape-outside: repeating-linear-gradient(     
+		     #0000 0 94.6px,      
+		     #000  0 97.6px);
+  }
+
+
+  .hexagon {
+    @apply bg-dark-blue;
+  }
+
+  .hexagon:not( :hover ) {
+    animation-name: hexagon-hover;
+    animation-duration: 2s;
+  }
+
+  .hexagon:hover {
+    @apply bg-amber-400;
+  }
+
+  @keyframes hexagon-hover {
+    0%   { @apply bg-amber-400;   }
+    100% { @apply bg-dark-blue; }
+  }
+}
