@@ -8,6 +8,7 @@ import Sponsors from './routes/sponsors.jsx';
 import Contact from './routes/contact.jsx';
 import Committee from './routes/committee.jsx';
 import ColAUMS from './routes/colAUMS.jsx';
+import Events from './routes/events.jsx';
 
 export default class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends React.Component {
 	    <Route path="/sponsors" element={<Sponsors />} />
 	    <Route path="/committee" element={<Committee />} />
 	    <Route path="/colaums" element={<ColAUMS />} />
+	    <Route path="/events" element={<Events />} />
 	  </Routes>
 	</div>
 	<Footer className="z-50"/>

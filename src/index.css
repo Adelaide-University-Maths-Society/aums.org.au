@@ -54,11 +54,12 @@
   .hexagon-grid .hexagon {
     width: 50px;
     margin: 3px;
-    height: 57.735px; 
+    height: 57.735px;
     display: inline-block;
     font-size:initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    margin-bottom: -11.425px; 
+    margin-bottom: -11.425px;
+    overflow: hidden;
   }
 
   .hexagon-grid::before {
@@ -66,8 +67,8 @@
     width: 28px;
     float: left;
     height: 120%;
-    shape-outside: repeating-linear-gradient(     
-		     #0000 0 94.6px,      
+    shape-outside: repeating-linear-gradient(
+		     #0000 0 94.6px,
 		     #000  0 97.6px);
   }
 

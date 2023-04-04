@@ -41,7 +41,7 @@ export default class Landing extends React.Component {
 
 	    </div>
 	    <div className="md:basis-2/5 place-self-center pointer-events-none">
-	      <img className="w-full" src={promotional_photo}/> 
+	      <img className="w-full" src={promotional_photo}/>
 	    </div>
 	  </div>
 	</div>
