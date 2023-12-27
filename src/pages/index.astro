@@ -26,9 +26,16 @@ import Navbar from "../components/Navbar.astro";
                 </div>
             </div>
         </div>
-        <div id="about" class=`${styles.aboutPadding} h-screen flex flex-col`>
+        <div id="about" class=`${styles.aboutPadding} flex flex-col`>
             <div class="bg-secondary bg-opacity-20 w-full h-full rounded-2xl px-20 py-12">
+                <Image src={logoImage} alt="logo" class="w-[60vw] md:w-[30vw] lg:w-[24vw]" />
                 <h2 class=`text-text font-heading ${styles.xl3Text} font-black`>About Us</h2>
+                <div class=`text-text font-body ${styles.mdText} flex flex-col gap-[2vh] pt-[5vh]`>
+                    <div>The Adelaide University Mathematics Society is a student run society that works to enrich the lives and education of students studying in the School of Mathematics.</div>
+                    <div> The society does this through the running of a number of community event's such as student research presentations, charity quiz nights and industry engagement nights. As well as helping enrich the community, the society also produces and sells revision materials to students.</div>
+                    <div>The students the run the society work in their free time to ensure that every student studying mathematics has the opportunity to have the best experience possible.</div>
+                    <div>To see news from us, follow us on facebook, instagram, linkedin and join us on discord.</div>
+                </div>
             </div>
         </div>
     </div>
