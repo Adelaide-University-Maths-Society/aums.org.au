@@ -6,23 +6,23 @@ import { Icon } from 'astro-icon/components';
 
 <div x-data="{ open: false }">
     <div class=`flex w-full justify-between ${styles.navbarPadding} bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80`>
-        <a href="/" class="hover:scale-110 ease-in-out transition delay-150"><Icon name="icon" class="h-8 w-8 md:h-12 md:w-12"/></a>
+        <!-- <a href="/" class="hover:scale-110 ease-in-out transition delay-150"><Icon name="icon" class="h-8 w-8 md:h-12 md:w-12"/></a> -->
         <button x-on:click="open = ! open">
             <Icon name="lucide:align-justify" class="text-text h-8 w-8 md:h-12 md:w-12 block md:hidden"/>
         </button>
         <div class=`hidden md:flex w-2/3 justify-between ${styles.xlText}`>
             <a href="/" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Home" ? "underline text-text": "text-sec-300"}`>Home</a>
-            <a href="/about" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "About" ? "underline text-text": "text-sec-300"}`>About</a>
-            <a href="/projects" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Projects" ? "underline text-text": "text-sec-300"}`>Projects</a>
-            <a href="/blog" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Blog" ? "underline text-text": "text-sec-300"}`>Blog</a>
+            <a href="/committee" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Committee" ? "underline text-text": "text-sec-300"}`>Committee</a>
+            <a href="/sponsors" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Sponsors" ? "underline text-text": "text-sec-300"}`>Sponsors</a>
+            <a href="/col-aums" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "ColAUMS" ? "underline text-text": "text-sec-300"}`>ColAUMS</a>
         </div>
     </div>
     <div x-show="open" class="z-10 absolute top-20 w-full bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80">
         <div class="flex flex-col w-full justify-center items-center gap-4">
             <a href="/" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Home" ? "underline text-text": "text-sec-300"}`>Home</a>
-            <a href="/about" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "About" ? "underline text-text": "text-sec-300"}`>About</a>
-            <a href="/projects" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Projects" ? "underline text-text": "text-sec-300"}`>Projects</a>
-            <a href="/blog" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Blog" ? "underline text-text": "text-sec-300"}`>Blog</a>
+            <a href="/committee" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Committee" ? "underline text-text": "text-sec-300"}`>Committee</a>
+            <a href="/sponsors" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "Sponsors" ? "underline text-text": "text-sec-300"}`>Sponsors</a>
+            <a href="/col-aums" class=`decoration-accent decoration-4 hover:underline ${pageTitle == "ColAUMS" ? "underline text-text": "text-sec-300"}`>ColAUMS</a>
         </div>
     </div>
 </div>
