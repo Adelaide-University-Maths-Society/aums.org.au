@@ -1,7 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { styles } from "../styles/tailwindStyle";
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.png";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <BaseLayout pageTitle="Home">
-	
+	<div class="w-full flex flex-col h-full justify-center">
+        <div class="h-screen flex flex-col">
+            <Navbar pageTitle="Home"/>
+            <div class=`${styles.mainPadding} grow items-center justify-center gap-[5vw] flex-col flex md:flex-row`>
+                <Image src={logoImage} alt="logo" class="w-[60vw] md:w-[30vw] lg:w-[24vw]" />
+                <div class=`w-[40vw] flex flex-col`>
+                    <h1 class=`text-primary font-heading ${styles.xl4Text} font-black`>Adelaide University Mathematics Society</h1>
+                    <div class=`text-text font-body ${styles.xlText} pt-[2vh] pb-[8vh] font-semibold`>Come for the <span class="text-accent">pizza</span>, stay for the <span class="text-accent">maths</span></div>
+                    <div class="flex w-full gap-[2vw]">
+                        <a href="https://google.com" class=`text-background ${styles.xlText} font-heading font-semibold px-4 md:px-12 justify-center  hover:-translate-y-1 ease-in-out duration-100 bg-primary rounded-xl py-4 flex items-center ${styles.lgText}`>
+                            <div>Join Us Today</div>
+                        </a>
+                        <a href="#about" class=`text-text ${styles.xlText} font-heading font-semibold px-4 md:px-12 justify-center  hover:-translate-y-1 ease-in-out duration-100 bg-bg-800 rounded-xl py-4 flex items-center ${styles.lgText}`>
+                            <div>About Us</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about" class=`${styles.aboutPadding} h-screen flex flex-col`>
+            <div class="bg-secondary bg-opacity-20 w-full h-full rounded-2xl px-20 py-12">
+                <h2 class=`text-text font-heading ${styles.xl3Text} font-black`>About Us</h2>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
