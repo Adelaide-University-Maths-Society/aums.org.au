@@ -1,0 +1,37 @@
+---
+import { styles } from "../styles/tailwindStyle";
+import { Image } from "astro:assets";
+import circleLogoImage from "../assets/logo_circle.svg";
+---
+<footer class=`w-full ${styles.footerPadding} bg-secondary bg-opacity-20`>
+    <div class="flex flex-wrap justify-between">
+        <div>
+            <Image src={circleLogoImage} alt="circle-logo" class="w-[25vw] lg:w-[12vw]" />
+            <div class=`text-primary font-heading ${styles.mdText} font-black text-center flex flex-col`>
+                <span class=``>Adelaide University</span>
+                <span class=``>Mathematics Society</span>
+            </div>
+        </div>
+        <div class="flex flex-col text-center">
+            <div class=`text-primary font-heading ${styles.xl2Text} font-black`>Explore</div>
+            <div class=`flex flex-col pt-[1vw] gap-2`>
+                <a href="/" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Home</a>
+                <a href="/events" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Events</a>
+                <a href="/#about" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>About</a>
+                <a href="/sponsors" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Sponsors</a>
+            </div>
+        </div>
+        <div class="flex flex-col text-center">
+            <div class=`text-primary font-heading ${styles.xl2Text} font-black`>Contact Us</div>
+            <div class=`flex flex-col pt-[1vw] gap-2`>
+                <a href="https://facebook.com/UofAMathsSociety/" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Facebook</a>
+                <a href="https://instagram.com/adelaideunimaths/" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Instagram</a>
+                <a href="https://linkedin.com/company/aums/" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Linkedin</a>
+                <a href="https://discord.gg/jpkqev8eJb" class=`text-text font-body ${styles.mdText} decoration-accent font-black hover:underline`>Discord</a>
+            </div>
+        </div>
+    </div>
+    <div class="w-full border-t-2 border-bg-800 mt-6 pt-4">
+        <div class=`font-body text-sec-100 {styles.mdText}`>© 2023 Adelaide University Mathematics Society. All rights reserved.</div>
+    </div>
+</footer>

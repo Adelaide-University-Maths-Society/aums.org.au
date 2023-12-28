@@ -7,6 +7,7 @@ const styles = {
     xl3Text:'text-xl   sm:text-2xl  md:text-3xl  lg:text-4xl',
     xl4Text:'text-2xl  sm:text-3xl  md:text-4xl  lg:text-5xl',
     navbarPadding: 'px-8 md:px-16 py-8 md:py-8',
+    footerPadding: 'px-8 md:px-16 pt-8 pb-4 md:pt-12 md:pb-4',
     mainPadding: 'px-8 md:px-20 lg:px-32 py-2 sm:py-8 md:py-4',
     colAUMSPadding: 'px-8 md:px-20 lg:px-32 py-2 sm:py-8 md:py-12',
     aboutPadding: 'px-8 md:px-20 lg:px-32 py-2 sm:py-8 md:py-12',

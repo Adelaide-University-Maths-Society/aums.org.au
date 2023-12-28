@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import logoImage from "../assets/logo.png";
 import aboutImage from "../assets/industry_night.jpg";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout pageTitle="Home">
@@ -46,5 +47,6 @@ import Navbar from "../components/Navbar.astro";
                 <Image src={aboutImage} alt="industry-night" class="rounded-3xl" />
             </div>
         </div>
+        <Footer />
     </div>
 </BaseLayout>
