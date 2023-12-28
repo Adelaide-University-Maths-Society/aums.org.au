@@ -1,3 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  .hexagon-grid {
+    font-size: 0; /*disable white space between inline block element */
+  }
+
+  .hexagon-grid .hexagon {
+    width: 50px;
+    margin: 3px;
+    height: 57.735px;
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-bottom: -11.425px;
+    overflow: hidden;
+  }
+
+  .hexagon-grid::before {
+    content: "";
+    width: 28px;
+    float: left;
+    height: 120%;
+    shape-outside: repeating-linear-gradient(
+		     #0000 0 94.6px,
+		     #000  0 97.6px);
+  }
+
+
+  .hexagon {
+    @apply bg-secondary bg-opacity-20;
+  }
+
+  .hexagon:not( :hover ) {
+    animation-name: hexagon-hover;
+    animation-duration: 2s;
+  }
+
+  .hexagon:hover {
+    @apply bg-primary;
+  }
+
+  @keyframes hexagon-hover {
+    0%   { @apply bg-primary;   }
+    100% { @apply bg-secondary bg-opacity-20; }
+  }
+}
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }

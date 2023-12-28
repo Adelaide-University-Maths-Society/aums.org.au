@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 import { styles } from "../styles/tailwindStyle";
+import Hexagon from "../components/Hexagon";
 ---
 
 <BaseLayout pageTitle="Events">
@@ -10,7 +11,9 @@ import { styles } from "../styles/tailwindStyle";
     <div class=`${styles.mainPadding}`>
         <h1 class=`text-primary font-heading ${styles.xl3Text} font-black`>2024 Events</h1>
         <p class=`text-text font-body ${styles.mdText}`>Coming soon!</p>
-        <div class="h-24"></div>
+    </div>
+    <div class="h-[80vw] relative">
+        <Hexagon client:only/>
     </div>
 	<Footer />
 </BaseLayout>
