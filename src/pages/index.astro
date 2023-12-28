@@ -11,12 +11,12 @@ import Navbar from "../components/Navbar.astro";
 	<div class="w-full flex flex-col h-full justify-center">
         <div class="h-screen flex flex-col">
             <Navbar pageTitle="Home"/>
-            <div class=`${styles.mainPadding} grow items-center justify-center gap-[5vw] flex-col flex md:flex-row`>
+            <div class=`${styles.mainPadding} grow items-center justify-center gap-[4vw] flex-col flex lg:flex-row`>
                 <Image src={logoImage} alt="logo" class="w-[60vw] md:w-[30vw] lg:w-[24vw]" />
-                <div class=`w-[40vw] flex flex-col`>
-                    <h1 class=`text-primary font-heading ${styles.xl4Text} font-black`>Adelaide University Mathematics Society</h1>
-                    <div class=`text-text font-body ${styles.xlText} pt-[2vh] pb-[8vh] font-semibold`>Come for the <span class="text-accent">pizza</span>, stay for the <span class="text-accent">maths</span></div>
-                    <div class="flex w-full gap-[2vw]">
+                <div class=`flex flex-col items-center lg:w-[40vw]`>
+                    <h1 class=`text-primary font-heading ${styles.xl4Text} font-black text-center`>Adelaide University Mathematics Society</h1>
+                    <div class=`text-text font-body ${styles.xlText} pt-[2vh] pb-[8vh] font-semibold text-center`>Come for the <span class="text-accent">pizza</span>, stay for the <span class="text-accent">maths</span></div>
+                    <div class="flex w-full gap-[4vw] md:gap-[2vw] justify-center">
                         <a href="https://clubs.getqpay.com/?tab=memberships&s=2828" class=`text-background ${styles.xlText} font-heading font-semibold px-4 md:px-12 justify-center  hover:-translate-y-1 ease-in-out duration-100 bg-primary rounded-xl py-4 flex items-center ${styles.lgText}`>
                             <div>Join Us Today</div>
                         </a>
@@ -29,9 +29,9 @@ import Navbar from "../components/Navbar.astro";
         </div>
         <div id="about" class=`${styles.aboutPadding} flex flex-col`>
             <div class="bg-secondary bg-opacity-[20%] w-full h-full rounded-3xl">
-                <div class="px-20 py-10">
+                <div class="px-8 py-6 lg:px-20 lg:py-10">
                     <h2 class=`text-primary font-heading ${styles.xl3Text} font-black`>About Us</h2>
-                    <div class=`text-text font-body ${styles.mdText} flex flex-col gap-[2vh] pt-[5vh]`>
+                    <div class=`text-text font-body ${styles.mdText} flex flex-col gap-[2vh] pt-[3vw]`>
                         <div>The <span class="text-accent font-bold">Adelaide University Mathematics Society</span> is a student run society that works to enrich the lives and education of students studying in the School of Mathematics.</div>
                         <div>The society does this through the running of a number of community event's such as student research presentations, charity quiz nights and industry engagement nights. As well as helping enrich the community, the society also produces and sells revision materials to students.</div>
                         <div>The students the run the society work in their free time to ensure that every student studying mathematics has the opportunity to have the best experience possible.</div>
