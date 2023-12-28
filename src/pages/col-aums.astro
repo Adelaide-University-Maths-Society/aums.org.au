@@ -1,8 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import { styles } from "../styles/tailwindStyle";
 ---
 
 <BaseLayout pageTitle="ColAUMS">
     <Navbar pageTitle="ColAUMS"/>
+    <div class=`${styles.colAUMSPadding} text-text font-body ${styles.lgText} flex flex-col justify-center text-center`>
+        <h1>Welcome to <span class="text-accent font-semibold">ColAUMS</span> - AUMS newsletter discussing cool mathematics and exciting new opportunities.</h1>
+        <h1><span class="text-accent font-semibold">ColAUMS</span> is written by <span class="text-accent font-semibold">Barry</span>. Please find the latest (and previous) colAUMS articles below.</h1>
+        <div>
+            <object data="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf" type="application/pdf" width="100%" height="500px">
+                <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
+            </object>
+        </div>
+    </div>
 </BaseLayout>
