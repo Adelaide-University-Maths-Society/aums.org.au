@@ -2,9 +2,10 @@
 import { styles } from "../styles/tailwindStyle";
 import { Image } from "astro:assets";
 import circleLogoImage from "../assets/logo_circle.svg";
+import { Icon } from 'astro-icon/components';
 ---
-<footer class=`w-full px-20 pt-4 pb-4 bg-secondary bg-opacity-20`>
-    <div class="flex flex-wrap justify-between items-center">
+<footer class=`w-full px-4 md:px-20 pt-4 pb-4 bg-secondary bg-opacity-20`>
+    <div class="flex flex-col md:flex-row items-center justify-center md:flex-wrap gap-8 md:gap-0 md:justify-between w-full">
         <div class="flex flex-col items-center">
             <Image src={circleLogoImage} alt="circle-logo" class="w-[25vw] lg:w-[15vw]" />
             <div class=`text-primary font-heading text-xl font-black text-center flex flex-col`>
@@ -12,7 +13,7 @@ import circleLogoImage from "../assets/logo_circle.svg";
                 <span class=``>Mathematics Society</span>
             </div>
         </div>
-        <div class="flex flex-col text-center">
+        <div class="flex-col text-center hidden md:flex">
             <div class=`text-primary font-heading text-2xl font-black`>Explore</div>
             <div class=`flex flex-col pt-[1vw] gap-2`>
                 <a href="/" class=`text-text font-body text-base decoration-accent font-black hover:underline`>Home</a>
@@ -21,7 +22,7 @@ import circleLogoImage from "../assets/logo_circle.svg";
                 <a href="/sponsors" class=`text-text font-body text-base decoration-accent font-black hover:underline`>Sponsors</a>
             </div>
         </div>
-        <div class="flex flex-col text-center">
+        <div class="flex-col text-center hidden md:flex">
             <div class=`text-primary font-heading text-2xl font-black`>Contact Us</div>
             <div class=`flex flex-col pt-[1vw] gap-2`>
                 <a href="https://facebook.com/UofAMathsSociety/" class=`text-text font-body text-base decoration-accent font-black hover:underline`>Facebook</a>
@@ -30,8 +31,14 @@ import circleLogoImage from "../assets/logo_circle.svg";
                 <a href="https://discord.gg/jpkqev8eJb" class=`text-text font-body text-base decoration-accent font-black hover:underline`>Discord</a>
             </div>
         </div>
+        <div class="flex md:hidden text-text justify-around w-full">
+            <a href="https://facebook.com/UofAMathsSociety/"><Icon name="bi:facebook" class="w-8 h-8"/></a>
+            <a href="https://instagram.com/adelaideunimaths/"><Icon name="bi:instagram" class="w-8 h-8"/></a>
+            <a href="https://linkedin.com/company/aums/"><Icon name="bi:linkedin" class="w-8 h-8"/></a>
+            <a href="https://discord.gg/jpkqev8eJb"><Icon name="bi:discord" class="w-8 h-8"/></a>
+        </div>
     </div>
     <div class="w-full border-t-2 border-bg-800 mt-6 pt-4">
-        <div class=`font-body text-sec-100 text-base`>© 2024 Adelaide University Mathematics Society. All rights reserved.</div>
+        <div class=`font-body flex text-sec-100 text-sm md:text-base text-center w-full`>© 2024 Adelaide University Mathematics Society. <span class="hidden md:flex pl-2"> All rights reserved.</span></div>
     </div>
 </footer>
