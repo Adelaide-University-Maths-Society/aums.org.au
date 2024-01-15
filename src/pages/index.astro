@@ -10,7 +10,7 @@ import Footer from "../components/Footer.astro";
 
 <BaseLayout pageTitle="Home">
 	<div class="w-full flex flex-col h-full justify-center">
-        <div class="h-screen flex flex-col">
+        <div class="min-h-screen flex flex-col">
             <Navbar pageTitle="Home"/>
             <div class=`${styles.mainPadding} grow items-center justify-center gap-[4vw] flex-col flex lg:flex-row`>
                 <Image src={logoImage} alt="logo" class="w-[40vw] md:w-[28vw] lg:w-[24vw]" />
@@ -28,11 +28,11 @@ import Footer from "../components/Footer.astro";
                 </div>
             </div>
         </div>
-        <div id="about" class=`${styles.aboutPadding} flex flex-col`>
+        <div id="about" class=`${styles.aboutPadding} flex flex-col pb-8 pt-8`>
             <div class="bg-secondary bg-opacity-[20%] w-full h-full rounded-3xl">
                 <div class="px-8 py-6 lg:px-20 lg:py-10">
-                    <h2 class=`text-primary font-heading ${styles.xl3Text} font-black`>About Us</h2>
-                    <div class=`text-text font-body ${styles.mdText} flex flex-col gap-[2vh] pt-[3vw]`>
+                    <h2 class=`text-primary font-heading text-2xl md:text-4xl font-black`>About Us</h2>
+                    <div class=`text-text font-body text-sm md:text-base flex flex-col gap-[2vh] pt-4 md:pt-6`>
                         <div>The <span class="text-accent font-bold">Adelaide University Mathematics Society</span> is a student run society that works to enrich the lives and education of students studying in the School of Mathematics.</div>
                         <div>The society does this through the running of a number of community event's such as student research presentations, charity quiz nights and industry engagement nights. As well as helping enrich the community, the society also produces and sells revision materials to students.</div>
                         <div>The students the run the society work in their free time to ensure that every student studying mathematics has the opportunity to have the best experience possible.</div>

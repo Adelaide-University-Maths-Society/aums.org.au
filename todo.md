@@ -1,0 +1,2 @@
+- Fix Footer (responsive for mobile)
+-

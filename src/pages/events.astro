@@ -8,12 +8,14 @@ import Hexagon from "../components/Hexagon";
 
 <BaseLayout pageTitle="Events">
 	<Navbar pageTitle="Events"/>
-    <div class=`${styles.mainPadding}`>
-        <h1 class=`text-primary font-heading ${styles.xl3Text} font-black`>2024 Events</h1>
-        <p class=`text-text font-body ${styles.mdText}`>Coming soon!</p>
-    </div>
-    <div class="h-[80vw] relative">
-        <Hexagon client:only/>
+    <div class=`min-h-screen`>
+        <div class=`${styles.mainPadding}`>
+            <h1 class=`text-primary font-heading text-4xl font-black`>2024 Events</h1>
+            <p class=`text-text font-body text-base`>Coming soon!</p>
+        </div>
+        <div class="h-[80vw] relative">
+            <Hexagon client:only/>
+        </div>
     </div>
 	<Footer />
 </BaseLayout>
