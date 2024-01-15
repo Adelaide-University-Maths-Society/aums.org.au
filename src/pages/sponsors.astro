@@ -2,9 +2,32 @@
 import Navbar from "../components/Navbar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
+import { styles } from "../styles/tailwindStyle";
 ---
 
 <BaseLayout pageTitle="Sponsors">
-	<Navbar pageTitle="Sponsors"/>
+	<div class="min-h-screen w-full">
+		<Navbar pageTitle="Sponsors" />
+		<div class=`${styles.mainPadding} py-8`>
+			<div class="font-heading text-3xl font-bold text-primary w-full text-center">
+				Our sponsors
+			</div>
+			<div class="font-body text-text pt-2 pt-8">
+				As a society for the students of the University of Adelaide, we require
+				sponsors to help run our larger events like the <span
+					class="text-accent font-semibold">industry night</span
+				> and the <span class="text-accent font-semibold">AUMS quiz night</span
+				>. The following are our sponsors for 2024!
+			</div>
+
+			<div class="text-text font-heading pt-8 text-2xl w-full text-center">To be updated...</div>
+
+			<div class="font-body text-text pt-8">
+				If you would like to get envolved, please email us at <a
+					href="mailto:sponsorships@aums.org.au"
+					class="decorations-accent hover:underline text-accent">sponsorships@aums.org.au</a>
+			</div>
+		</div>
+	</div>
 	<Footer />
 </BaseLayout>
