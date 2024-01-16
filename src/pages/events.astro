@@ -4,18 +4,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 import { styles } from "../styles/tailwindStyle";
 import Hexagon from "../components/Hexagon";
+import Event from "../components/Event.astro";
 ---
 
 <BaseLayout pageTitle="Events">
-	<Navbar pageTitle="Events"/>
+    <Navbar pageTitle="Events" />
     <div class=`min-h-screen`>
         <div class=`${styles.mainPadding}`>
-            <h1 class=`text-primary font-heading text-4xl font-black`>2024 Events</h1>
-            <p class=`text-text font-body text-base`>Coming soon!</p>
-        </div>
-        <div class="h-[80vw] relative">
-            <Hexagon client:only/>
+            <h1 class=`text-primary font-heading text-3xl lg:text-4xl font-black`>
+                2024 Events
+            </h1>
+            <div class="flex flex-col gap-4 pt-6">
+                <Event
+                    calendarLink="https://www.google.com/calendar/render?action=TEMPLATE&text=Industry%20Night&dates=20240116T042900Z/20240116T043000Z&details=This%20is%20the%20description&location=University%20of%20Adelaide&sf=true&output=xml"
+                    imagePath="/src/assets/industry_night.jpg"
+                    title="Industry Night"
+                    description="Talk to industry people and gain insights into your future career."
+                    dateTime="24/02/2023"
+                />
+            </div>
         </div>
     </div>
-	<Footer />
+    <Footer />
 </BaseLayout>
