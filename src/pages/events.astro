@@ -4,8 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 import { styles } from "../styles/tailwindStyle";
 import Hexagon from "../components/Hexagon";
-import Event from "../components/Event.astro";
-import { Icon } from 'astro-icon/components';
+import EventImage from "../components/EventImage.astro";
+import EventCard from "../components/EventCard.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <BaseLayout pageTitle="Events">
@@ -13,21 +14,71 @@ import { Icon } from 'astro-icon/components';
     <div class=`min-h-screen`>
         <div class=`${styles.mainPadding}`>
             <div class="flex flex-row justify-between items-center">
-                <h1 class=`text-primary font-heading text-3xl lg:text-4xl font-black`>
+                <h1
+                    class=`text-primary font-heading text-3xl lg:text-4xl font-black`
+                >
                     2024 Events
                 </h1>
-                <div class="text-accent font-semibold text-xl flex items-center gap-2 deoreations-accent bi:arrow-90deg-left">
-                    See past events <Icon name="bi:arrow-90deg-left"/>
-                </div>
+                <a
+                    href="/past-events"
+                    class="hover:-translate-y-1 ease-in-out duration-100 delay-50 text-accent font-semibold text-xl flex items-center gap-2 deoreations-accent"
+                >
+                    See past events <Icon name="bi:arrow-90deg-left" />
+                </a>
             </div>
             <div class="flex flex-col gap-4 pt-6">
-                <Event
+                <!--
+                <EventImage
                     calendarLink="https://www.google.com/calendar/render?action=TEMPLATE&text=Industry%20Night&dates=20240116T042900Z/20240116T043000Z&details=This%20is%20the%20description&location=University%20of%20Adelaide&sf=true&output=xml"
                     imagePath="/src/assets/industry_night.jpg"
                     title="Industry Night"
                     description="Talk to industry people and gain insights into your future career."
                     dateTime="24/02/2023"
                 />
+                -->
+                <EventCard
+                    title="O'Week Stall"
+                    description="New year, new me(mbership)"
+                    dateTime="Tuesday 20/2"
+                    color="bg-acc-600"
+                />
+                <EventCard
+                    title="Meet & Greet"
+                    description="Slice and dice"
+                    dateTime="Thursday 29/2"
+                    color="bg-secondary bg-opacity-20"
+                />
+                <EventCard
+                    title="Pi Day Lunch"
+                    description="Celebrate transcendentality"
+                    dateTime="Thursday 14/3"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Maths Olympiad"
+                    description="The better Olympics"
+                    dateTime="Friday 15/3"
+                    color="bg-acc-600"
+                />
+                <EventCard
+                    title="Pub Crawl"
+                    description="A random walk through town"
+                    dateTime="Friday 10/5"
+                    color="bg-secondary bg-opacity-20"
+                />
+                <EventCard
+                    title="Quiz Night"
+                    description="Win infinite glory"
+                    dateTime="Saturday 1/6"
+                    color="bg-primary"
+                />
+            </div>
+            <div class="font-body text-text pt-8 pb-8">
+                Stay tuned for <span class="text-accent font-semibold"
+                    >future events</span
+                > as our event sequence is as dynamic as a mathematical function,
+                always striving for optimization and the perfect solution to meet
+                your requirements!
             </div>
         </div>
     </div>

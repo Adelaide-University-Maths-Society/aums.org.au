@@ -15,6 +15,7 @@
     "@astrojs/tailwind": "^5.0.4",
     "@fontsource/alegreya-sans-sc": "^5.0.8",
     "@fontsource/poppins": "^5.0.8",
+    "@iconify-json/mdi": "^1.1.64",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.0.7",

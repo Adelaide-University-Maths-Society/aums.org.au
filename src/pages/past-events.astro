@@ -1,0 +1,38 @@
+---
+import Navbar from "../components/Navbar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import { styles } from "../styles/tailwindStyle";
+import { Image } from "astro:assets";
+const images = await Astro.glob("/src/assets/past-events/*").then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<BaseLayout pageTitle="Sponsors">
+  <div class="min-h-screen w-full">
+    <Navbar pageTitle="Sponsors" />
+    <div class=`${styles.mainPadding} py-8`>
+      <div
+        class="font-heading text-3xl font-bold text-primary w-full text-center"
+      >
+        Past Events
+      </div>
+      <div class="flex flex-wrap gap-8 py-8">
+        {
+          images.map((image) => (
+            <div class="flex items-center justify-center swiper-slide">
+              <img
+                class="h-[30vw] object-contain rounded-xl"
+                src={image.src}
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <Footer />
+  </div>
+</BaseLayout>

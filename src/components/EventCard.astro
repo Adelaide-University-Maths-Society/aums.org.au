@@ -1,0 +1,27 @@
+---
+const { title, description, dateTime } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class=`items-center flex justify-between w-full rounded-2xl font-heading px-12 py-6 bg-secondary bg-opacity-20`
+>
+  <div class="h-full flex flex-row">
+    <!--
+    <div class="h-full bg-primary p-2 rounded-md">
+      <Icon class="h-8 w-8 text-background" name="mdi:calendar" />
+    </div>
+    -->
+    <div class="text-3xl font-extrabold text-text">
+      {dateTime}
+    </div>
+  </div>
+  <div class="flex flex-col text-right">
+    <div class="text-4xl font-bold text-primary">
+      {title}
+    </div>
+    <div class="font-semibold text-text">
+      {description}
+    </div>
+  </div>
+</div>
