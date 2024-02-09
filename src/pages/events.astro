@@ -5,15 +5,21 @@ import Footer from "../components/Footer.astro";
 import { styles } from "../styles/tailwindStyle";
 import Hexagon from "../components/Hexagon";
 import Event from "../components/Event.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <BaseLayout pageTitle="Events">
     <Navbar pageTitle="Events" />
     <div class=`min-h-screen`>
         <div class=`${styles.mainPadding}`>
-            <h1 class=`text-primary font-heading text-3xl lg:text-4xl font-black`>
-                2024 Events
-            </h1>
+            <div class="flex flex-row justify-between items-center">
+                <h1 class=`text-primary font-heading text-3xl lg:text-4xl font-black`>
+                    2024 Events
+                </h1>
+                <div class="text-accent font-semibold text-xl flex items-center gap-2 deoreations-accent bi:arrow-90deg-left">
+                    See past events <Icon name="bi:arrow-90deg-left"/>
+                </div>
+            </div>
             <div class="flex flex-col gap-4 pt-6">
                 <Event
                     calendarLink="https://www.google.com/calendar/render?action=TEMPLATE&text=Industry%20Night&dates=20240116T042900Z/20240116T043000Z&details=This%20is%20the%20description&location=University%20of%20Adelaide&sf=true&output=xml"

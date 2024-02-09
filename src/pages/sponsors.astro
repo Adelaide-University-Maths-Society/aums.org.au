@@ -3,16 +3,23 @@ import Navbar from "../components/Navbar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 import { styles } from "../styles/tailwindStyle";
+import { Image } from "astro:assets";
+import janeStreetImage from "../assets/jane-street.png";
+import imcImage from "../assets/imc.png";
+import optiverImage from "../assets/optiver.png";
+import sigImage from "../assets/sig.png";
 ---
 
 <BaseLayout pageTitle="Sponsors">
 	<div class="min-h-screen w-full">
 		<Navbar pageTitle="Sponsors" />
 		<div class=`${styles.mainPadding} py-8`>
-			<div class="font-heading text-3xl font-bold text-primary w-full text-center">
+			<div
+				class="font-heading text-3xl font-bold text-primary w-full text-center"
+			>
 				Our sponsors
 			</div>
-			<div class="font-body text-text pt-2 pt-8">
+			<div class="font-body text-text pt-2 pt-8 pb-8">
 				As a society for the students of the University of Adelaide, we require
 				sponsors to help run our larger events like the <span
 					class="text-accent font-semibold">industry night</span
@@ -20,12 +27,81 @@ import { styles } from "../styles/tailwindStyle";
 				>. The following are our sponsors for 2024!
 			</div>
 
-			<div class="text-text font-heading pt-8 text-2xl w-full text-center">To be updated...</div>
+			<div class="gap-8 flex flex-col">
+				<div
+					class="w-full bg-secondary bg-opacity-20 rounded-2xl flex flex-col px-8 py-8 items-center gap-8"
+				>
+					<div class="text-primary font-bold text-3xl">Gold Sponsors</div>
+					<Image alt="jane-street" src={janeStreetImage} class="w-1/2 lg:w-1/3" />
+					<div class="text-text">
+						Established in 2000, <span class="text-accent font-semibold"
+							>Jane Street</span
+						> is a global quantitative trading firm with 2,000+ employees across
+						five offices. Trading in 45+ countries, they innovate in tech and thrive
+						in navigating uncertainties with a focus on quantitative thinking. Their
+						collaborative approach involves traders, researchers, and technologists
+						working closely to build trading systems. Jane Street values ethical
+						conduct, responsible risk management, intellectual humility, and collaboration
+						over hierarchy. This culture has contributed to their success in providing
+						liquidity even in the most challenging market conditions.
+					</div>
+				</div>
 
-			<div class="font-body text-text pt-8">
+				<div
+					class="w-full bg-secondary bg-opacity-20 rounded-2xl flex flex-col px-8 py-8 items-center gap-8"
+				>
+					<div class="text-primary font-bold text-3xl">Silver Sponsors</div>
+					<Image alt="imc" src={imcImage} class="w-1/2 lg:w-1/3" />
+					<div class="text-text">
+						Founded in 1989, <span class="text-accent font-semibold"
+							>IMC Trading</span
+						> is a global market maker with a focus on cutting-edge technology. Operating
+						in 100+ trading venues, they reduce transaction costs with automated
+						trading. As a technology-centric firm, IMC invests in talent and tools
+						for enhanced productivity. Their risk and compliance framework ensures
+						market resilience and regulatory adherence. Active in industry associations,
+						IMC advocates for equal market access. With over 30 years of experience,
+						they continue to innovate and expand into new markets.
+					</div>
+					<Image alt="optiver" src={optiverImage} class="w-1/2 lg:w-1/3" />
+					<div class="text-text">
+						<span class="text-accent font-semibold">Optiver</span>, a leading
+						proprietary trading firm, is dedicated to improving global financial
+						markets. With 1,900+ employees across 9 offices worldwide, they
+						specialize in market making for various financial products. Their
+						rich history, consistent liquidity provision, and commitment to
+						innovation make Optiver a cornerstone in the industry. Explore
+						opportunities to work with Optiver in trading, technology, risk &
+						control, data science, and business operations. Be part of their
+						journey to shape the future of financial markets.
+					</div>
+				</div>
+
+				<div
+					class="w-full bg-secondary bg-opacity-20 rounded-2xl flex flex-col px-8 py-8 items-center gap-8"
+				>
+					<div class="text-primary font-bold text-3xl">Bronze Sponsors</div>
+					<Image alt="sig" src={sigImage} class="w-1/2 lg:w-1/3" />
+					<div class="text-text">
+						<span class="text-accent font-semibold">SIG</span>, a pioneer in
+						quantitative trading, trades globally, specializing in derivatives.
+						As a top market maker, SIG handles millions of transactions daily,
+						providing crucial liquidity. Beyond trading, SIG ventures into
+						institutional brokerage, private equity, sports analytics, and
+						structured capital, applying its entrepreneurial mindset and
+						analytical prowess. Dive into SIG's diverse offerings in trading and
+						ventures across various industries, showcasing a commitment to
+						innovation and expertise.
+					</div>
+				</div>
+			</div>
+
+			<div class="font-body text-text pt-8 pb-4">
 				If you would like to get envolved, please email us at <a
 					href="mailto:sponsorships@aums.org.au"
-					class="decorations-accent hover:underline text-accent">sponsorships@aums.org.au</a>
+					class="decorations-accent hover:underline text-accent"
+					>sponsorships@aums.org.au</a
+				>
 			</div>
 		</div>
 	</div>
