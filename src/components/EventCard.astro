@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div
-  class=`items-center flex justify-between w-full rounded-2xl font-heading px-12 py-6 bg-secondary bg-opacity-20`
+  class=`lg:items-center flex flex-col lg:flex-row lg:justify-between w-full rounded-2xl font-heading px-8 md:px-12 py-6 bg-secondary bg-opacity-20`
 >
   <div class="h-full flex flex-row">
     <!--
@@ -12,12 +12,12 @@ import { Icon } from "astro-icon/components";
       <Icon class="h-8 w-8 text-background" name="mdi:calendar" />
     </div>
     -->
-    <div class="text-3xl font-extrabold text-text">
+    <div class="text-2xl lg:text-3xl font-extrabold text-text">
       {dateTime}
     </div>
   </div>
-  <div class="flex flex-col text-right">
-    <div class="text-4xl font-bold text-primary">
+  <div class="flex flex-col lg:text-right">
+    <div class="text-3xl lg:text-4xl font-bold text-primary">
       {title}
     </div>
     <div class="font-semibold text-text">

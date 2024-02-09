@@ -18,12 +18,12 @@ const images = await Astro.glob("/src/assets/past-events/*").then((files) => {
       >
         Past Events
       </div>
-      <div class="flex flex-wrap gap-8 py-8">
+      <div class="flex justify-between flex-wrap gap-2 md:gap-4 lg:gap-8 py-8">
         {
           images.map((image) => (
-            <div class="flex items-center justify-center swiper-slide">
+            <div class="flex grow items-center justify-center swiper-slide">
               <img
-                class="h-[30vw] object-contain rounded-xl"
+                class="w-full h-[20vh] md:h-[30vw] object-cover rounded-md md:rounded-xl"
                 src={image.src}
                 alt=""
                 loading="lazy"
