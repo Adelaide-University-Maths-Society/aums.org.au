@@ -11,8 +11,8 @@ interface Props {
 }
 
 const { imagePath, name, role, description } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,svg}');
-if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,svg}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/committee-images/*.{jpeg,jpg,png,gif,svg}');
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/committee-images/*.{jpeg,jpg,png,gif,svg}"`);
 ---
 
 <div class="bg-secondary bg-opacity-20 rounded-2xl flex flex-col md:flex-row px-6 py-6 items-center">
