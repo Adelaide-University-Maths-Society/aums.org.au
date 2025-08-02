@@ -13,20 +13,81 @@ import { Icon } from "astro-icon/components";
     <Navbar pageTitle="Events" />
     <div class=`min-h-screen`>
         <div class=`${styles.mainPadding}`>
+            <!-- Upcoming Events Section -->
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <h1
                     class=`text-primary font-heading text-3xl lg:text-4xl font-black`
                 >
-                    2025 Events
+                    Upcoming Events
                 </h1>
-                <a
-                    href="/past-events"
-                    class="hover:-translate-y-1 ease-in-out duration-100 delay-50 text-accent font-semibold text-xl flex items-center gap-2 deoreations-accent"
-                >
-                    See past events <Icon name="bi:arrow-90deg-left" />
-                </a>
             </div>
-            <div class="flex flex-col gap-4 pt-6">
+            <div class="flex flex-col gap-4 pt-6 pb-8">
+                <EventCard
+                    title="Quiz Night"
+                    description=""
+                    dateTime="Monday 4th Aug"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Clubsland Stall"
+                    description=""
+                    dateTime="Tuesday 12th Aug"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Taylor Fry Event"
+                    description=""
+                    dateTime="Wednesday 20th Aug"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Jane Street Estimathon"
+                    description=""
+                    dateTime="Wednesday 20th Aug"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Industry Night"
+                    description=""
+                    dateTime="Thursday 21st Aug"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Pub Crawl"
+                    description=""
+                    dateTime="Friday 12th Sep"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Maths Ball"
+                    description=""
+                    dateTime="Saturday 20th Sep"
+                    color="bg-primary"
+                />
+                <EventCard
+                    title="Simon Marais Mathematics Competition"
+                    description=""
+                    dateTime="Saturday 11th Oct"
+                    color="bg-primary"
+                />
+            </div>
+
+            <!-- Past Events of the Year Section -->
+            <div class="pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <h1
+                        class=`text-primary font-heading text-3xl lg:text-4xl font-black`
+                    >
+                        Past Events of the Year
+                    </h1>
+                    <a
+                        href="/past-events"
+                        class="hover:-translate-y-1 ease-in-out duration-100 delay-50 text-accent font-semibold text-xl flex items-center gap-2 deoreations-accent"
+                    >
+                        See all past events <Icon name="bi:arrow-90deg-left" />
+                    </a>
+                </div>
+                <div class="flex flex-col gap-4 pt-6">
                 <EventCard
                     title="O-Week Stall"
                     description=""
@@ -87,13 +148,7 @@ import { Icon } from "astro-icon/components";
                     dateTime="Thursday 22nd May"
                     color="bg-primary"
                 />
-            </div>
-            <div class="font-body text-text pt-8 pb-8">
-                Stay tuned for <span class="text-accent font-semibold"
-                    >future events</span
-                > as our event sequence is as dynamic as a mathematical function,
-                always striving for optimization and the perfect solution to meet
-                your requirements!
+                </div>
             </div>
         </div>
     </div>
